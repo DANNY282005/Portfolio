@@ -1,0 +1,189 @@
+{
+  "profile": {
+    "name": "Daniel E",
+    "title": "AI Engineer | Agentic AI Systems | Backend Developer",
+    "tagline": "Open to AI Engineer, Agentic Engineer, Backend Developer, Python Developer, and Java Developer opportunities.",
+    "email": "danielsolomon282005@gmail.com",
+    "phone": "+91 9444484888",
+    "location": "Chennai, India",
+    "github": "https://github.com/",
+    "linkedin": "https://linkedin.com/",
+    "objective": "AI Engineer with hands-on experience architecting and building agentic AI systems on AWS Bedrock AgentCore using the Strands framework, including multi-agent orchestration, human-in-the-loop (HITL) workflows, and agent memory design. Skilled in backend API development, cloud architecture (AWS serverless, ECS, EKS), and applying LLM-based automation to real-world document processing pipelines. Open to building scalable, intelligent systems as an AI Engineer, Agentic Engineer, Backend Developer, Python Developer, or Java Developer.",
+    "resumeFile": "Daniel_E_Resume.pdf",
+    "openRoles": ["AI Engineer", "Agentic Engineer", "Backend Developer", "Python Developer", "Java Developer"]
+  },
+  "skills": [
+    {
+      "category": "Agentic AI & LLM",
+      "items": ["LangGraph", "LangChain", "Strands", "AWS Bedrock AgentCore", "Model Context Protocol (MCP)", "RAG", "Agent Memory & Persistence", "HITL Workflows", "Multi-Agent Orchestration"]
+    },
+    {
+      "category": "Agentic Coding Tools",
+      "items": ["Claude Code", "Kiro"]
+    },
+    {
+      "category": "Languages",
+      "items": ["Python", "Java", "Go"]
+    },
+    {
+      "category": "Cloud Platforms",
+      "items": ["AWS Bedrock", "AWS EC2", "AWS S3", "AWS RDS", "AWS ECS", "AWS EKS", "AWS Lambda / Serverless", "AWS CloudWatch"]
+    },
+    {
+      "category": "Databases",
+      "items": ["PostgreSQL", "MySQL"]
+    },
+    {
+      "category": "DevOps & Tools",
+      "items": ["Docker", "Terraform", "Git", "Jenkins", "CI/CD"]
+    },
+    {
+      "category": "Core Skills",
+      "items": ["FastAPI", "Router-Service-Repository Architecture", "Design Patterns", "Data Structures & Algorithms", "Database Management Systems"]
+    }
+  ],
+  "experience": [
+    {
+      "id": "zeb-ai-platform-analyst",
+      "company": "Zeb",
+      "role": "AI Platform Engineering - Analyst",
+      "period": "Jun 2026 - Aug 2026",
+      "location": "Chennai, India · On-site",
+      "highlights": [
+        "Architected and developed an Agentic AI system on AWS Bedrock AgentCore Runtime using the Strands framework, featuring a Planner agent, HITL approval gates, and MCP-based tool entitlement for deployments, including agent memory systems built on AgentCore Memory namespaces, Redis for transient state, and MongoDB for persistent storage.",
+        "Designed the technical architecture for a PDF-to-INF/BKS document mapping pipeline - a 4-stage Ingest to Detect to Map to Emit system combining Claude-based document understanding, a RAG-based hybrid retrieval pipeline (BM25 + embedding KNN via Reciprocal Rank Fusion), and a planned LangGraph Generator-Validator agent loop for automated document generation.",
+        "Led technical discovery for a new client engagement, producing architecture diagrams, risk matrices, Jira epic/story breakdowns, and stakeholder kickoff materials, while tracking and resolving technical dependencies across internal and external teams.",
+        "Used and gained hands-on experience with agentic coding platforms such as Claude Code and Kiro for AI-assisted software development workflows."
+      ]
+    },
+    {
+      "id": "zeb-ai-platform-trainee",
+      "company": "Zeb",
+      "role": "AI Platform Trainee Engineer",
+      "period": "Dec 2025 - Jun 2026",
+      "location": "Chennai, India · On-site",
+      "highlights": [
+        "Built a strong foundation in backend API development, including layered architecture design (router, service, repository patterns) and software design patterns for scalable, maintainable code, using Python and Go.",
+        "Learned cloud architecture and deployment patterns on AWS, including serverless architecture, and containerized workloads on ECS and EKS, with PostgreSQL for relational data modeling.",
+        "Built a foundation in agentic AI development - including Strands, LangGraph, and LangChain frameworks, agent memory and persistence, HITL workflows, multi-agent handoff patterns, and core LLM concepts."
+      ]
+    },
+    {
+      "id": "panimalar-contest-admin",
+      "company": "Panimalar Engineering College",
+      "role": "Contest Registration Admin",
+      "period": "May 2025",
+      "location": "Chennai, India · On-site",
+      "project": "Cloud Contest Registration System",
+      "highlights": [
+        "Built a Contest Registration System using HTML, CSS, JavaScript, and Flask, with student registration, form validation, an admin dashboard, and automated participant emails; deployed on AWS (EC2/S3)."
+      ]
+    },
+    {
+      "id": "tcs-ion-intern",
+      "company": "TCS iON",
+      "role": "Cloud Computing Intern",
+      "period": "Dec 2024 - Mar 2025",
+      "location": "Chennai, India · Remote",
+      "project": "Dockerized Java Stack Application (Car Rental System)",
+      "highlights": [
+        "Completed a 125-hour internship containerizing a Java-based Car Rental application; built and deployed multi-container environments using Docker & Docker Compose, gaining hands-on DevOps workflow experience."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "coding-agent",
+      "title": "Coding Agent",
+      "subtitle": "Multi-Agent Code Generation & Review System",
+      "description": "A two-agent coding workflow using LangGraph: a Code Generation agent produces code from the given requirements, and a Review Agent evaluates it for issues; if issues are found, they are routed back to the Code Generation agent along with the existing code for revision, looping until the review passes and the final code is returned as output. Implemented persistent agent memory and workflow state using a PostgreSQL-backed store, enabling checkpointing and resumability across the generate-review loop.",
+      "tech": ["Python", "LangGraph", "PostgreSQL", "LLM Agents"],
+      "tags": ["Multi-Agent Systems", "Agent Memory"],
+      "github": "https://github.com/DANNY282005/Coding-Agent.git"
+    },
+    {
+      "id": "smart-motorcycle-ignition",
+      "title": "Smart Motorcycle Ignition Control",
+      "subtitle": "YOLO + BiLSTM Helmet Detection | Final Year Project",
+      "description": "Developed a real-time helmet-detection ignition control system using YOLOv8 for per-frame object detection and a BiLSTM temporal controller with a rolling temporal verifier to prevent false triggers. Implemented a 60-second continuous-wear rule, an 8-second safety cooldown, visual overlays, GPIO-ready relay, buzzer, and LED control for Raspberry Pi, and trained YOLO on a custom Roboflow dataset.",
+      "tech": ["Python", "YOLOv8", "Ultralytics", "PyTorch", "OpenCV", "RPi.GPIO", "Picamera2"],
+      "tags": ["Computer Vision", "Edge AI"],
+      "github": "https://github.com/DANNY282005/helmet-ignition-system.git"
+    },
+    {
+      "id": "hotel-booking-cicd",
+      "title": "Cloud-Automated CI/CD for Hotel Booking Application",
+      "subtitle": "DevOps & Infrastructure as Code",
+      "description": "Integrated Cloud & DevOps workflows by automating CI/CD with Jenkins and GitHub Webhooks; built Docker images, pushed to Docker Hub, and deployed on AWS EC2 provisioned via Terraform IaC.",
+      "tech": ["Jenkins", "Terraform", "Docker", "AWS EC2", "Docker Hub", "Java", "Spring", "MySQL"],
+      "tags": ["CI/CD", "IaC"],
+      "github": "https://github.com/DANNY282005/CloudDevopsProject.git"
+    },
+    {
+      "id": "e-learning-platform",
+      "title": "Cloud-Hosted E-Learning Platform",
+      "subtitle": "Group Project",
+      "description": "Built a full-stack virtual classroom application for online classes, file sharing, and user management using HTML/CSS/JavaScript and Flask, deployed on AWS EC2 with S3 for course materials and RDS for relational data.",
+      "tech": ["HTML", "CSS", "JavaScript", "Flask", "AWS EC2", "AWS S3", "AWS RDS"],
+      "tags": [],
+      "github": "https://github.com/DANNY282005/azam_aws_prjct.git"
+    }
+  ],
+  "research": [
+    {
+      "id": "yolo-bilstm",
+      "title": "YOLO-BiLSTM Fusion for Smart Motorcycle Ignition",
+      "publisher": "IEEE",
+      "date": "May 2025",
+      "description": "Introduced a fused YOLO + BiLSTM architecture for high-accuracy helmet detection with temporal learning and ignition control, improving response time and safety automation over the earlier CNN/SSD approach.",
+      "url": "https://ieeexplore.ieee.org/document/11004780"
+    },
+    {
+      "id": "defect-prediction-ml",
+      "title": "Boosting Software Quality: A Machine Learning Technique for Predicting Defects",
+      "publisher": "IEEE",
+      "date": "Jan 2025",
+      "description": "Developed and evaluated ML models to predict software defects using code metrics, improving early defect identification and optimizing QA effort.",
+      "url": "https://ieeexplore.ieee.org/document/10883614"
+    },
+    {
+      "id": "cnn-ssd-helmet",
+      "title": "CNN and SSD Based Real-Time Motorcycle Ignition Control based on Helmet Detection",
+      "publisher": "IEEE",
+      "date": "Oct 2024",
+      "description": "Built an intelligent ignition control model integrating CNN and SSD for real-time helmet detection, enabling automatic safety enforcement for two-wheelers.",
+      "url": "https://ieeexplore.ieee.org/document/10714706"
+    }
+  ],
+  "education": [
+    {
+      "id": "panimalar-be",
+      "institution": "Panimalar Engineering College, Chennai",
+      "degree": "B.E. Computer Science and Engineering",
+      "detail": "8.92 CGPA",
+      "period": "2026"
+    },
+    {
+      "id": "mcc-hse",
+      "institution": "Madras Christian College Higher Secondary School",
+      "degree": "HSE",
+      "detail": "89%",
+      "period": "2022"
+    },
+    {
+      "id": "mcc-sslc",
+      "institution": "Madras Christian College Higher Secondary School",
+      "degree": "SSLC",
+      "detail": "74%",
+      "period": "2020"
+    }
+  ],
+  "certifications": [
+    { "id": "nptel-java", "name": "NPTEL Certification in Java Programming", "issuer": "IIT Kharagpur" },
+    { "id": "aws-academy", "name": "AWS Academy Certification in Cloud Computing", "issuer": "AWS Academy" },
+    { "id": "tcs-ion-cloud", "name": "TCS iON Certification in Cloud Computing", "issuer": "TCS iON" },
+    { "id": "tcs-ion-docker", "name": "TCS iON Virtual Internship using Docker and Java Microservices", "issuer": "TCS iON" }
+  ],
+  "softSkills": ["Leadership", "Adaptability", "Decision Making", "Time Management"],
+  "languages": ["English", "Tamil"]
+}
