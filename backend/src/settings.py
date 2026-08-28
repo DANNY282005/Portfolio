@@ -32,7 +32,7 @@ class Settings(BaseSettings):
     PORT: int = 8000
 
     # CORS
-    CORS_ALLOWED_ORIGINS: str = "http://localhost:5173,http://localhost:4173"
+    CORS_ALLOWED_ORIGINS: str = "http://localhost:5173,https://portfolio-rmei.onrender.com/"
 
     # Logging
     LOG_LEVEL: str = "INFO"
