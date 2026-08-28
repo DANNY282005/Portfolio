@@ -21,7 +21,7 @@ def download_resume(settings: Settings = Depends(get_settings)) -> FileResponse:
     if not resume_path.exists():
         logger.warning("resume file not found", extra={"path": str(resume_path)})
         raise ResourceNotFoundError("Resume file is not available")
-    logger.info("resume response ready", extra={"filename": "Daniel_E_Resume.pdf"})
+    logger.info("resume response ready", extra={"resume_filename": "Daniel_E_Resume.pdf"})
     return FileResponse(
         path=resume_path,
         media_type="application/pdf",

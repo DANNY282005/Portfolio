@@ -30,7 +30,15 @@ class JsonFormatter(logging.Formatter):
         if record.exc_info:
             payload["exception_type"] = str(record.exc_info[0].__name__) if record.exc_info[0] else None
             payload["exception_message"] = str(record.exc_info[1]) if record.exc_info[1] else None
-        for field in ("request_id", "method", "path", "status_code", "duration_ms", "item_count", "filename"):
+        for field in (
+            "request_id",
+            "method",
+            "path",
+            "status_code",
+            "duration_ms",
+            "item_count",
+            "resume_filename",
+        ):
             if hasattr(record, field):
                 payload[field] = getattr(record, field)
         return json.dumps(payload)
