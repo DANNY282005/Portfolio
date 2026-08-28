@@ -42,6 +42,9 @@ class Settings(BaseSettings):
     DATA_FILE_PATH: str = str(BASE_DIR / "data" / "resume_data.json")
     RESUME_FILE_PATH: str = str(BASE_DIR / "static" / "Daniel_E_Resume.pdf")
 
+    # Vite API base URL
+    VITE_API_BASE_URL: str = "https://daniel-portfolio-2xsd.onrender.com"
+
     @property
     def cors_origins(self) -> list[str]:
         """CORS origins as a clean list, derived from the raw env string."""
