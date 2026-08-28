@@ -34,6 +34,10 @@ Edit `.env` with local settings
 make run          # http://localhost:8000, docs at /docs
 ```
 
+## Deploy on Render
+
+Create a Render Web Service using Docker and set the root directory to `backend`. Render supplies the `PORT` variable, which the Docker command uses automatically. Set `CORS_ALLOWED_ORIGINS` to the deployed frontend URL and use `/health` as the health check path.
+
 ## Testing
 
 ```bash
