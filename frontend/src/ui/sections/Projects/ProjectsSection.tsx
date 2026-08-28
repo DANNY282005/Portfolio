@@ -12,7 +12,7 @@ export const ProjectsSection = ({ projects }: ProjectsSectionProps) => (
       <SectionHeading
         eyebrow="Projects"
         title="Things I've built"
-        description="Personal and academic projects spanning agentic AI, DevOps, and full-stack development."
+        description="Personal and academic projects spanning agentic AI, DevOps, and Backend development."
       />
       <div className="grid gap-5 sm:grid-cols-2">
         {projects.map((project) => (
