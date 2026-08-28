@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion';
 import { resumeDownloadUrl } from '@/services/portfolioService';
 import { DownloadIcon, GithubIcon, LinkedinIcon, MailIcon } from '@/ui/reusables/Icons';
@@ -10,6 +12,24 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ profile }: HeroSectionProps) => {
   const reduceMotion = usePrefersReducedMotion();
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const copyEmail = async (): Promise<void> => {
+    try {
+      await navigator.clipboard.writeText(profile.email);
+    } catch {
+      const textArea = document.createElement('textarea');
+      textArea.value = profile.email;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      textArea.remove();
+    }
+    setEmailCopied(true);
+    window.setTimeout(() => setEmailCopied(false), 1800);
+  };
 
   return (
     <section id="hero" className="relative flex min-h-screen items-center px-6 pb-24 pt-32 sm:px-12 lg:px-24">
@@ -38,14 +58,17 @@ export const HeroSection = ({ profile }: HeroSectionProps) => {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3" aria-label="Social links">
-            <a
-              href={`mailto:${profile.email}`}
+            <button
+              type="button"
+              onClick={copyEmail}
+              aria-label={emailCopied ? 'Email copied to clipboard' : `Copy ${profile.email}`}
+              title="Copy email address"
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm transition-colors hover:bg-[var(--surface-2)]"
               style={{ border: '1px solid var(--border)', color: 'var(--color-muted)' }}
             >
               <MailIcon className="h-4 w-4" />
-              Email
-            </a>
+              {emailCopied ? 'Copied' : 'Email'}
+            </button>
             <a
               href={profile.linkedin}
               target="_blank"
